@@ -52,9 +52,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       "Content-Type": "application/json",
     },
   });
-  // console.log(response);
   const data = await response.json();
-  // console.log(data);
   return {
     props: data,
   };

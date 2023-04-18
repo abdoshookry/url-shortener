@@ -14,7 +14,6 @@ export default function Url(context: { originalUrl: string }) {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { params } = context;
   const url = params?.url;
-  console.log("response");
   const response = await fetch(`${process.env.domain}/api/${url}`, {
     method: "Get",
     headers: {
@@ -23,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   });
 
   const data = await response.json();
-  // console.log(data);
+
   return {
     props: data,
   };
