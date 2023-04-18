@@ -26,14 +26,12 @@ export default function Home() {
         },
         body: JSON.stringify({ originalUrl: originalUrl }),
       });
-      console.log(response);
       const data = await response.json();
       if (!response.ok) {
         setErrorMessage(data.message);
         return;
       }
 
-      console.log(data);
       setShortUrl(data.url.shortUrl);
       setErrorMessage("");
     } catch (error: any) {
