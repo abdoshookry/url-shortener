@@ -44,7 +44,7 @@ export default function Home() {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(shortUrl);
+    navigator.clipboard.writeText(websiteUrl + "/" + shortUrl);
   };
 
   return (
