@@ -46,7 +46,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { params } = context;
   const url = params?.url;
 
-  const response = await fetch(`http://localhost:3000/api/clicks/${url}`, {
+  const response = await fetch(`${process.env.domain}/api/clicks/${url}`, {
     method: "Get",
     headers: {
       "Content-Type": "application/json",
